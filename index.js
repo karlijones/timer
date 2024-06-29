@@ -9,7 +9,11 @@ class Timer {
 // calling this.tick manually here will prevent any delay when the user clicks the timer
     start = () => {
         this.tick();
-       setInterval(this.tick, 1000);
+        this.interval = setInterval(this.tick, 1000);
+    };
+
+    pause = () => {
+        clearInterval(this.interval);
     };
 
     tick = () => {
