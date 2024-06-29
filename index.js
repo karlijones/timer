@@ -6,9 +6,14 @@ class Timer {
 
         this.startButton.addEventListener('click', this.start);
     }
-
+// calling this.tick manually here will prevent any delay when the user clicks the timer
     start = () => {
-        console.log('Time to start the timer!');
+        this.tick();
+       setInterval(this.tick, 1000);
+    };
+
+    tick = () => {
+
     }
 }
 
