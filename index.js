@@ -17,8 +17,19 @@ class Timer {
     };
 
     tick = () => {
-        const timeRemaining = parseFloat(this.durationInput.value);
-        this.durationInput.value = timeRemaining - 1;
+        this.timeRemaining = timeRemaining - 1;
+    };
+
+    // getter
+    // get keyword invokes timeRemaining without needing the ()
+    get timeRemaining() {
+        return parseFloat(this.durationInput.value);
+    }
+
+    //setter
+    //timeRemaining - 1 is set equal to the arguement (time)
+    set timeRemaining(time) {
+        this.durationInput.value = time;
     }
 }
 
