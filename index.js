@@ -1,13 +1,20 @@
 class Timer {
-    constructor(durationInput, startButton, pauseButton) {
+    constructor(durationInput, startButton, pauseButton, callbacks) {
         this.durationInput = durationInput;
         this.startButton = startButton; 
         this.pauseButton = pauseButton;
+        if (callbacks) {
+          this.onStart = callbacks.onStart;  
+        }
+//callbacks are optional
 
         this.startButton.addEventListener('click', this.start);
     }
 // calling this.tick manually here will prevent any delay when the user clicks the timer
     start = () => {
+        if (this.onStart) {
+          this.onStart();  
+        }
         this.tick();
         this.interval = setInterval(this.tick, 1000);
     };
@@ -42,5 +49,15 @@ const durationInput = document.querySelector('#duration');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
 
-const timer = newTimer(durationInput, startButton, pauseButton);
+const timer = newTimer(durationInput, startButton, pauseButton {
+    onStart() {
+        console.log('Timer started');
+    },
+    onTick() {
+
+    },
+    onComplete() {
+
+    }
+});
 timer.start();
