@@ -4,7 +4,9 @@ class Timer {
         this.startButton = startButton; 
         this.pauseButton = pauseButton;
         if (callbacks) {
-          this.onStart = callbacks.onStart;  
+          this.onStart = callbacks.onStart;
+          this.onTick = callbacks.onTick;
+          this.onComplete = callbacks.onComplete;  
         }
 //callbacks are optional
 
