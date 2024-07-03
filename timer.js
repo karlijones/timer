@@ -1,3 +1,5 @@
+// Separated out the timer to make the overall code more readable
+
 class Timer {
     constructor(durationInput, startButton, pauseButton, callbacks) {
         this.durationInput = durationInput;
