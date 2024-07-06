@@ -50,6 +50,6 @@ class Timer {
     //setter
     //timeRemaining - 1 is set equal to the arguement (time)
     set timeRemaining(time) {
-        this.durationInput.value = time;
+        this.durationInput.value = time.toFixed(2);
     }
 }
