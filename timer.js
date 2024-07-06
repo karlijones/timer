@@ -34,7 +34,7 @@ class Timer {
                 this.onComplete();
             }
         } else {
-            this.timeRemaining = timeRemaining - 1;
+            this.timeRemaining = timeRemaining - .05;
             if (this.onTick) {
                 this.onTick();
             }
