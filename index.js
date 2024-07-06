@@ -1,6 +1,8 @@
 const durationInput = document.querySelector('#duration');
 const startButton = document.querySelector('#start');
 const pauseButton = document.querySelector('#pause');
+const circle = document.querySelector('circle');
+
 
 const timer = newTimer(durationInput, startButton, pauseButton {
     onStart() {
